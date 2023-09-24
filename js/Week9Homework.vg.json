@@ -24,9 +24,14 @@
                         },
                         "key": "State/UT",
                         "fields": [
-                            "Number of Cases - Registered"
+                            "Number of Cases - Registered",
+                            "Population"
                         ]
                     }
+                },
+                {
+                    "calculate": "datum['Number of Cases - Registered'] / (datum['Population'] / 1000000)", 
+                    "as": "Cases per 1,000,000 Population"
                 }
             ],
             "mark": {
@@ -35,12 +40,12 @@
             },
             "encoding": {
                 "color": {
-                    "field": "Number of Cases - Registered",
+                    "field": "Cases per 1,000,000 Population",
                     "type": "quantitative",
                     "scale":{
                         "type": "quantile",
-                        "domain": [0, 10, 50, 100, 200, 400, 800, 1600, 3340],
-                        "range": ["#ffffe5", "#fff7bc", "#fee391", "#fec44f", "#fe9929", "#ec7014", "#cc4c02", "#8c2d04"]
+                        "domain": [0, 1, 2, 5, 10, 20, 50],
+                        "range": ["#ffffd4", "#fee391", "#fec44f", "#fe9929", "#d95f0e", "#993404"]
                     }
                 },
                 "tooltip": [
@@ -50,8 +55,9 @@
                         "title": "State/UT"
                     },
                     {
-                        "field": "Number of Cases - Registered",
-                        "type": "quantitative"
+                        "field": "Cases per 1,000,000 Population",
+                        "type": "quantitative",
+                        "title": "Cases per 1,000,000 Population"
                     }
                 ]
             }
