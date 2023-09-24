@@ -1,9 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Week 9 Homework</title>
-  </head>
-  <body>
-    <h1>Week 9 Homework Heading</h1>
-  </body>
-</html>
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 450,
+    "title": "Earthquakes of magnitude 4 or large between 4 Oct 2020 and 10 Oct 2020",
+    "projection": {"type": "equalEarth"},
+    "layer": [
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/ChoonSeong/FIT3179-Data-Visualisation/Week9-Homework/ne_110m.json",
+          "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
+        },
+        "mark": {"type": "geoshape", "fill": "lightgray", "stroke": "white"}
+      }]
+  }
