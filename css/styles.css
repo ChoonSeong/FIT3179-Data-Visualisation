@@ -19,7 +19,10 @@ body {
 }
 
 .vis-container {
-    width: 100%;
+	top:100px;
+	bottom: 100px; 
+	left: 100px;
+	right: 100px;
 }
 
 .pure-g {
