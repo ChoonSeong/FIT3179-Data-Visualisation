@@ -1,8 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Analysis of India Criminal Cases In 2018",
-    "width": 500,
-    "height": 400,
+    "width": "container",
     "data": {
       "url": "https://raw.githubusercontent.com/ChoonSeong/FIT3179-Data-Visualisation/Week9-Homework/data/2018%20Cases%20against%20Police%20Personnels.csv"
     },
