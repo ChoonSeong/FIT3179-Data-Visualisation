@@ -1,12 +1,4 @@
-#choropleth_map {
-	margin: 20px;
-	top:100px;
-	bottom: 100px; 
-	left: 100px;
-	right: 100px;
-}
-
-#stacked_bar_chart {
+.visualisation-container {
 	margin: 20px;
 	top:100px;
 	bottom: 100px; 
