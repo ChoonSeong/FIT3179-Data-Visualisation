@@ -5,3 +5,8 @@
 	left: 100px;
 	right: 100px;
 }
+
+/* Add extra space below elements */
+.element-with-extra-space {
+    margin-bottom: 30px; /* Adjust this value to set the desired space */
+}
