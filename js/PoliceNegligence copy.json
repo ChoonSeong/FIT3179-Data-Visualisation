@@ -1,0 +1,26 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Escaped prisoners situation in India (2018)",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ChoonSeong/FIT3179-Data-Visualisation/Data-Visualisation-Assignment-2/data/2018%20Escapes%20from%20Police%20Custody.csv"
+  },
+  "transform": [
+    {
+      "fold": [
+        "Escapees - Re-Arrested",
+        "Escapees - Absconding"
+      ],
+      "as": [
+        "key",
+        "value"
+      ]
+    },
+    {"filter": "datum.value > 0"}
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {"aggregate": "sum", "field": "value"},
+    "y": {"field": "State/UT"},
+    "color": {"field": "key"}
+  }
+}
