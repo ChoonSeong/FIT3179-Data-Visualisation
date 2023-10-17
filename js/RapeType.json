@@ -1,0 +1,78 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Child vs Women Victims of Rape in India (2018)",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ChoonSeong/FIT3179-Data-Visualisation/Data-Visualisation-Assignment-2/data/2018%20Victims%20of%20Rape.csv"
+  },
+  "spacing": 0,
+  "hconcat": [
+    {
+      "title": "Child Victims (Below 18 Yrs)",
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "State/UT",
+          "type": "nominal",
+          "axis": null,
+          "title": "State/UT"
+        },
+        "x": {
+          "field": "Child Victims of Rape (Below 18 Yrs) - Total Girl/Child Victims",
+          "aggregate": "sum",
+          "title": "Number of Child Victims",
+          "axis": {"format": "s"},
+          "sort": "descending"
+        },
+        "color": {
+          "value": "#91bfdb"
+        }
+      }
+    },
+    {
+      "width": 20,
+      "view": {"stroke": null},
+      "mark": {
+        "type": "text",
+        "align": "center"
+      },
+      "encoding": {
+        "y": {
+          "field": "State/UT",
+          "type": "nominal",
+          "axis": null,
+          "title": "State/UT"
+        },
+        "text": {
+          "field": "State/UT",
+          "type": "nominal"
+        }
+      }
+    },
+    {
+      "title": "Women Victims (Above 18 Yrs)",
+      "mark": "bar",
+      "encoding": {
+        "y": {
+          "field": "State/UT",
+          "type": "nominal",
+          "axis": null,
+          "title": "State/UT"
+        },
+        "x": {
+          "field": "Women Victims of Rape (Above 18 Yrs) - Total Women/Adult Victims",
+          "aggregate": "sum",
+          "title": "Number of Women Victims",
+          "axis": {"format": "s"},
+          "scale": {"domain": [0, 5000]}
+        },
+        "color": {
+          "value": "#fc8d59"
+        }
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": false}
+  }
+}
