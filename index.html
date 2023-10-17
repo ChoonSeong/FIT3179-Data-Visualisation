@@ -51,13 +51,13 @@
 
         <div class="pure-g">
             <div class="pure-u-1-1">
-                <div id="diverging_bar_chart" class="vis-container"></div>
+                <div id="diverging_bar_chart1" class="vis-container"></div>
             </div>
         </div>
 
         <div class="pure-g">
             <div class="pure-u-1-1">
-                <div id="diverging_bar_chart" class="vis-container"></div>
+                <div id="diverging_bar_chart2" class="vis-container"></div>
             </div>
         </div>
 
@@ -81,11 +81,11 @@
         }).catch(console.error);
 
         var spec3 = "js/RapeType.vg.json";
-        vegaEmbed('#diverging_bar_chart', spec3).then(function (result) {
+        vegaEmbed('#diverging_bar_chart1', spec3).then(function (result) {
         }).catch(console.error);
 
         var spec4 = "js/EscapesFrom.vg.json";
-        vegaEmbed('#diverging_bar_chart', spec4).then(function (result) {
+        vegaEmbed('#diverging_bar_chart2', spec4).then(function (result) {
         }).catch(console.error);
 
         var spec5 = "js/PoliceNegligence.vg.json";
