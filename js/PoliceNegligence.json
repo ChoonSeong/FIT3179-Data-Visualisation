@@ -1,0 +1,23 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A simple radial chart with embedded data.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ChoonSeong/FIT3179-Data-Visualisation/Data-Visualisation-Assignment-2/data/2018%20Escapes%20from%20Police%20Custody.csv"
+  },
+  "transform": [
+    {"filter": "datum['Cases against Police for Negligence'] > 3"}
+  ],
+  "layer": [{
+    "mark": {"type": "arc", "innerRadius": 20, "stroke": "#fff"}
+  },{
+    "mark": {"type": "text", "radiusOffset": 10},
+    "encoding": {
+      "text": {"field": "Cases against Police for Negligence", "type": "quantitative"}
+    }
+  }],
+  "encoding": {
+    "theta": {"field": "Cases against Police for Negligence", "type": "quantitative", "stack": true, "sort": "ascending"},
+    "radius": {"field": "Cases against Police for Negligence", "scale": {"type": "sqrt", "zero": true, "rangeMin": 20}},  
+    "color": {"field": "Cases against Police for Negligence", "type": "nominal", "legend": null}
+  }
+}
