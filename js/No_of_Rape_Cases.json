@@ -3,7 +3,7 @@
     "title": "2018 Criminal Cases in India",
     "width": "container",
     "data": {
-        "url": "https://raw.githubusercontent.com/ChoonSeong/FIT3179-Data-Visualisation/Week9-Homework/js/ne_10m_admin_1_India_Official.json",
+        "url": "https://raw.githubusercontent.com/ChoonSeong/FIT3179-Data-Visualisation/Data-Visualisation-Assignment-2/js/ne_10m_admin_1_India_Official.json",
         "format": {
             "type": "topojson",
             "feature": "ne_10m_admin_1_India_Official"
@@ -19,18 +19,18 @@
                     "lookup": "properties.name",
                     "from": {
                         "data": {
-                            "url": "https://raw.githubusercontent.com/ChoonSeong/FIT3179-Data-Visualisation/Week9-Homework/data/2018%20Cases%20against%20Police%20Personnels.csv"
+                            "url": "https://raw.githubusercontent.com/ChoonSeong/FIT3179-Data-Visualisation/Data-Visualisation-Assignment-2/data/2018%20Victims%20of%20Rape.csv"
                         },
                         "key": "State/UT",
                         "fields": [
-                            "Number of Cases - Registered",
+                            "Cases Reported",
                             "Population"
                         ]
                     }
                 },
                 {
-                    "calculate": "datum['Number of Cases - Registered'] / (datum['Population'] / 1000000)", 
-                    "as": "Cases per 1,000,000 Population"
+                    "calculate": "datum['Cases Reported'] / (datum['Population'] / 1000000)", 
+                    "as": "Rape Cases per 1,000,000 Population"
                 }
             ],
             "mark": {
@@ -39,7 +39,7 @@
             },
             "encoding": {
                 "color": {
-                    "field": "Cases per 1,000,000 Population",
+                    "field": "Rape Cases per 1,000,000 Population",
                     "type": "quantitative",
                     "scale":{
                         "type": "quantile",
@@ -54,9 +54,9 @@
                         "title": "State/UT"
                     },
                     {
-                        "field": "Cases per 1,000,000 Population",
+                        "field": "Rape Cases per 1,000,000 Population",
                         "type": "quantitative",
-                        "title": "Cases per 1,000,000 Population"
+                        "title": "Rape Cases per 1,000,000 Population"
                     }
                 ]
             }
