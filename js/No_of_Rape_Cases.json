@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "2018 Criminal Cases in India",
+    "title": "2018 Rape Cases Reported in India",
     "width": "container",
     "data": {
         "url": "https://raw.githubusercontent.com/ChoonSeong/FIT3179-Data-Visualisation/Data-Visualisation-Assignment-2/js/ne_10m_admin_1_India_Official.json",
@@ -30,7 +30,7 @@
                 },
                 {
                     "calculate": "datum['Cases Reported'] / (datum['Population'] / 1000000)", 
-                    "as": "Rape Cases per 1,000,000 Population"
+                    "as": "Rape Cases per 1,000,00 Population"
                 }
             ],
             "mark": {
@@ -39,11 +39,11 @@
             },
             "encoding": {
                 "color": {
-                    "field": "Rape Cases per 1,000,000 Population",
+                    "field": "Rape Cases per 1,000,00 Population",
                     "type": "quantitative",
                     "scale":{
                         "type": "quantile",
-                        "domain": [0, 1, 2, 5, 10, 20, 50],
+                        "domain": [0, 2, 5, 10, 20, 50, 100],
                         "range": ["#ffffd4", "#fee391", "#fec44f", "#fe9929", "#d95f0e", "#993404"]
                     }
                 },
@@ -54,9 +54,9 @@
                         "title": "State/UT"
                     },
                     {
-                        "field": "Rape Cases per 1,000,000 Population",
+                        "field": "Rape Cases per 1,000,00 Population",
                         "type": "quantitative",
-                        "title": "Rape Cases per 1,000,000 Population"
+                        "title": "Rape Cases per 1,000,00 Population"
                     }
                 ]
             }
