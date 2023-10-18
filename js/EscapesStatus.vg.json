@@ -5,6 +5,13 @@
   "data": {
     "url": "https://raw.githubusercontent.com/ChoonSeong/FIT3179-Data-Visualisation/Data-Visualisation-Assignment-2/data/2018%20Escapes%20from%20Police%20Custody.csv"
   },
+  "params": [
+    {
+      "name": "highlight",
+      "select": {"type": "point", "on": "mouseover"}
+    },
+    {"name": "select", "select": "point"}
+  ],
   "transform": [
     {
       "fold": [
@@ -18,10 +25,56 @@
     },
     {"filter": "datum.value > 0"}
   ],
-  "mark": "bar",
+  "mark": {
+    "type": "bar", 
+    "cornerRadius": 5,
+    "stroke": "black",
+    "cursor": "pointer"
+  },
   "encoding": {
     "x": {"aggregate": "sum", "field": "value"},
     "y": {"field": "State/UT"},
-    "color": {"field": "key", "title": "Status of Escapes", "legend": {"orient": "bottom"}}
+    "color": {"field": "key", "title": "Status of Escapes", "legend": {"orient": "bottom"}},
+    "fillOpacity": {
+      "condition": {"param": "select", "value": 1},
+      "value": 0.3
+    },
+    "strokeWidth": {
+      "condition": [
+        {
+          "param": "select",
+          "empty": false,
+          "value": 3
+        },
+        {
+          "param": "highlight",
+          "empty": false,
+          "value": 3
+        }
+      ],
+      "value": 0
+    },
+    "tooltip": [
+      {
+          "field": "State/UT",
+          "type": "nominal",
+          "title": "State/UT"
+      },
+      {
+          "field": "key",
+          "type": "nominal",
+          "title": "Type of escape"
+      },
+      {
+        "field": "value",
+        "type": "quantitative",
+        "title": "Number of escapes"
+    }
+    ]
+  },
+  "config": {
+    "scale": {
+      "bandPaddingInner": 0.2
+    }
   }
 }
