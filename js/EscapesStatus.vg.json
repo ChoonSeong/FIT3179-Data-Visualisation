@@ -21,6 +21,6 @@
   "encoding": {
     "x": {"aggregate": "sum", "field": "value"},
     "y": {"field": "State/UT"},
-    "color": {"field": "key", "title": "Status of Escapes"}
+    "color": {"field": "key", "title": "Status of Escapes", "legend": {"orient": "bottom"}}
   }
 }
