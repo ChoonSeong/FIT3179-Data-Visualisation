@@ -135,12 +135,23 @@
           "aggregate": "sum",
           "title": "Number of Child Victims",
           "axis": {"format": "s"},
-          "sort": "descending",
-          "scale": {"domain": [0, 4000]}
+          "sort": "descending"
         },
         "color": {
           "value": "#91bfdb"
-        }
+        },
+        "tooltip": [
+          {
+              "field": "State/UT",
+              "type": "nominal",
+              "title": "State/UT"
+          },
+          {
+              "field": "Child Victims of Rape (Below 18 Yrs) - Total Girl/Child Victims",
+              "type": "quantitative",
+              "title": "Number of Child Victims"
+          }
+        ]
       }
     },
     {
@@ -177,12 +188,23 @@
           "field": "Women Victims of Rape (Above 18 Yrs) - Total Women/Adult Victims",
           "aggregate": "sum",
           "title": "Number of Women Victims",
-          "axis": {"format": "s"},
-          "scale": {"domain": [0, 4000]}
+          "axis": {"format": "s"}
         },
         "color": {
           "value": "#fc8d59"
-        }
+        },
+        "tooltip": [
+          {
+              "field": "State/UT",
+              "type": "nominal",
+              "title": "State/UT"
+          },
+          {
+              "field": "Women Victims of Rape (Above 18 Yrs) - Total Women/Adult Victims",
+              "type": "quantitative",
+              "title": "Number of Women Victims"
+          }
+        ]
       }
     }
   ],
