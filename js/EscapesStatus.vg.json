@@ -7,8 +7,8 @@
   "transform": [
     {
       "fold": [
-        "Escapees - Re-Arrested",
-        "Escapees - Absconding"
+        "Escapes - Re-Arrested",
+        "Escapes - Absconding"
       ],
       "as": [
         "key",
@@ -21,6 +21,6 @@
   "encoding": {
     "x": {"aggregate": "sum", "field": "value"},
     "y": {"field": "State/UT"},
-    "color": {"field": "key"}
+    "color": {"field": "key", "title": "Status of Escapes"}
   }
 }
