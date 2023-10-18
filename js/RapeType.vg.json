@@ -122,7 +122,11 @@
   "hconcat": [
     {
       "title": "Child Victims (Below 18 Yrs)",
-      "mark": "bar",
+      "mark": {
+        "type": "bar", 
+        "cornerRadius": 3,
+        "cursor": "pointer"
+      },
       "encoding": {
         "y": {
           "field": "State/UT",
@@ -176,7 +180,11 @@
     },
     {
       "title": "Women Victims (Above 18 Yrs)",
-      "mark": "bar",
+      "mark": {
+        "type": "bar", 
+        "cornerRadius": 3,
+        "cursor": "pointer"
+      },
       "encoding": {
         "y": {
           "field": "State/UT",

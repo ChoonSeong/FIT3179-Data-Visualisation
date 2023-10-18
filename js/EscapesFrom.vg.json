@@ -122,7 +122,11 @@
   "hconcat": [
     {
       "title": "Persons Escaped From Lockup",
-      "mark": "bar",
+      "mark": {
+        "type": "bar", 
+        "cornerRadius": 3,
+        "cursor": "pointer"
+      },
       "encoding": {
         "y": {
           "field": "State/UT",
