@@ -13,6 +13,11 @@ h2{
     padding-left: 10px;
 }
 
+h3 {
+    text-align: center;
+    text-decoration: underline;
+}
+
 body {
     background-color: lightgray;
 }
@@ -92,4 +97,21 @@ div.right-content {
 
 .pure-g {
     margin-bottom: 50px;
+}
+
+footer {
+    text-align: left;
+    padding: 3px;
+    background-color: #0496c7;
+    color: white;
+}
+
+.bottom-page{
+    width: 70%;
+    margin: auto;
+    padding: 50px;
+}
+
+a {
+    color: white;
 }
