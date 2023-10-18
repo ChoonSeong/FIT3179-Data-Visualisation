@@ -140,7 +140,19 @@
         },
         "color": {
           "value": "#91bfdb"
-        }
+        },
+        "tooltip": [
+          {
+              "field": "State/UT",
+              "type": "nominal",
+              "title": "State/UT"
+          },
+          {
+              "field": "Persons Escaped - From lockup",
+              "type": "quantitative",
+              "title": "Persons Escaped - From Lockup"
+          }
+        ]
       }
     },
     {
@@ -181,7 +193,19 @@
         },
         "color": {
           "value": "#fc8d59"
-        }
+        },
+        "tooltip": [
+          {
+              "field": "State/UT",
+              "type": "nominal",
+              "title": "State/UT"
+          },
+          {
+              "field": "Persons Escaped - Outside Lockup",
+              "type": "quantitative",
+              "title": "Persons Escaped - Outside Lockup"
+          }
+        ]
       }
     }
   ],
