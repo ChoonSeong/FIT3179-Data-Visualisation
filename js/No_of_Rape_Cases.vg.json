@@ -46,7 +46,8 @@
                         "type": "quantile",
                         "domain": [0, 2, 5, 10, 20, 50, 100],
                         "range": ["#ffffd4", "#fee391", "#fec44f", "#fe9929", "#d95f0e", "#993404"]
-                    }
+                    },
+                    "title": "Rape Cases Rate"
                 },
                 "tooltip": [
                     {
