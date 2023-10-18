@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "Escaped prisoners situation in India (2018)",
+  "description": "Escaped prisoners status in India (2018)",
   "width": "container",
   "data": {
     "url": "https://raw.githubusercontent.com/ChoonSeong/FIT3179-Data-Visualisation/Data-Visualisation-Assignment-2/data/2018%20Escapes%20from%20Police%20Custody.csv"
