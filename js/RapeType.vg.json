@@ -91,8 +91,34 @@
         "name": "State/UT Selection: "
       }
     },
+    {
+      "name": "Minimum_Number_of_Child_Victims",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 2500,
+        "step": 100,
+        "name": "Minimum Number of Child Victims: "
+      }
+    },
+    {
+      "name": "Minimum_Number_of_Women_Victims",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 2500,
+        "step": 100,
+        "name": "Minimum Number of Women Victims: "
+      }
+    }
   ],
-  "transform": [{"filter": "State_Selection == null || datum['State/UT'] == State_Selection"}],
+  "transform": [
+    {"filter": "State_Selection == null || datum['State/UT'] == State_Selection"},
+    {"filter": "datum['Child Victims of Rape (Below 18 Yrs) - Total Girl/Child Victims'] > Minimum_Number_of_Child_Victims"},
+    {"filter": "datum['Women Victims of Rape (Above 18 Yrs) - Total Women/Adult Victims'] > Minimum_Number_of_Women_Victims"},
+  ],
   "hconcat": [
     {
       "title": "Child Victims (Below 18 Yrs)",
@@ -109,7 +135,8 @@
           "aggregate": "sum",
           "title": "Number of Child Victims",
           "axis": {"format": "s"},
-          "sort": "descending"
+          "sort": "descending",
+          "scale": {"domain": [0, 4000]}
         },
         "color": {
           "value": "#91bfdb"
@@ -151,7 +178,7 @@
           "aggregate": "sum",
           "title": "Number of Women Victims",
           "axis": {"format": "s"},
-          "scale": {"domain": [0, 5000]}
+          "scale": {"domain": [0, 4000]}
         },
         "color": {
           "value": "#fc8d59"
