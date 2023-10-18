@@ -5,6 +5,121 @@
     "url": "https://raw.githubusercontent.com/ChoonSeong/FIT3179-Data-Visualisation/Data-Visualisation-Assignment-2/data/2018%20Escapes%20from%20Police%20Custody.csv"
   },
   "spacing": 0,
+  "params": [
+    {
+      "name": "State_Selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Andhra Pradesh",
+          "Arunachal Pradesh",
+          "Assam",
+          "Bihar",
+          "Chhattisgarh",
+          "Goa",
+          "Gujarat",
+          "Haryana",
+          "Himachal Pradesh",
+          "Jammu and Kashmir",
+          "Jharkhand",
+          "Karnataka",
+          "Kerala",
+          "Madhya Pradesh", 
+          "Maharashtra",
+          "Manipur",
+          "Meghalaya",
+          "Mizoram",
+          "Nagaland",
+          "Orissa",
+          "Punjab",
+          "Rajasthan",
+          "Sikkim",
+          "Tamil Nadu",
+          "Telangana",
+          "Tripura",
+          "Uttar Pradesh",
+          "Uttaranchal",
+          "West Bengal",
+          "Andaman and Nicobar",
+          "Chandigarh",
+          "Dadra and Nagar Haveli",
+          "Daman and Diu",
+          "Delhi",
+          "Lakshadweep",
+          "Puducherry"
+        ],
+        "labels":[
+          "Show All",
+          "Andhra Pradesh",
+          "Arunachal Pradesh",
+          "Assam",
+          "Bihar",
+          "Chhattisgarh",
+          "Goa",
+          "Gujarat",
+          "Haryana",
+          "Himachal Pradesh",
+          "Jammu and Kashmir",
+          "Jharkhand",
+          "Karnataka",
+          "Kerala",
+          "Madhya Pradesh",
+          "Maharashtra",
+          "Manipur",
+          "Meghalaya",
+          "Mizoram",
+          "Nagaland",
+          "Orissa",
+          "Punjab",
+          "Rajasthan",
+          "Sikkim",
+          "Tamil Nadu",
+          "Telangana",
+          "Tripura",
+          "Uttar Pradesh",
+          "Uttaranchal",
+          "West Bengal",
+          "Andaman and Nicobar",
+          "Chandigarh",
+          "Dadra and Nagar Haveli",
+          "Daman and Diu",
+          "Delhi",
+          "Lakshadweep",
+          "Puducherry"
+        ],
+        "name": "State/UT Selection: "
+      }
+    },
+    {
+      "name": "Minimum_Number_of_Escapes_From_Lockup",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 25,
+        "step": 1,
+        "name": "Minimum Number of Escapes From Lockup: "
+      }
+    },
+    {
+      "name": "Minimum_Number_of_Escapes_Outside_Lockup",
+      "value": 0,
+      "bind": {
+        "input": "range",
+        "min": 0,
+        "max": 75,
+        "step": 1,
+        "name": "Minimum Number of Escapes Outside Lockup: "
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "State_Selection == null || datum['State/UT'] == State_Selection"},
+    {"filter": "datum['Persons Escaped - From lockup'] >= Minimum_Number_of_Escapes_From_Lockup"},
+    {"filter": "datum['Persons Escaped - Outside Lockup'] >= Minimum_Number_of_Escapes_Outside_Lockup"},
+    {"filter": "datum['Persons Escaped - From lockup'] != 0 && datum['Persons Escaped - Outside Lockup'] != 0"}
+  ],
   "hconcat": [
     {
       "title": "Persons Escaped From Lockup",
