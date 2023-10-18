@@ -116,8 +116,8 @@
   ],
   "transform": [
     {"filter": "State_Selection == null || datum['State/UT'] == State_Selection"},
-    {"filter": "datum['Child Victims of Rape (Below 18 Yrs) - Total Girl/Child Victims'] > Minimum_Number_of_Child_Victims"},
-    {"filter": "datum['Women Victims of Rape (Above 18 Yrs) - Total Women/Adult Victims'] > Minimum_Number_of_Women_Victims"}
+    {"filter": "datum['Child Victims of Rape (Below 18 Yrs) - Total Girl/Child Victims'] >= Minimum_Number_of_Child_Victims"},
+    {"filter": "datum['Women Victims of Rape (Above 18 Yrs) - Total Women/Adult Victims'] >= Minimum_Number_of_Women_Victims"}
   ],
   "hconcat": [
     {
