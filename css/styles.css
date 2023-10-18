@@ -4,6 +4,13 @@ body *{
 
 h1 {
     font-weight: 900;
+    font-size: 40px;
+    flex: 2;
+}
+
+h2{
+    font-size: 30px;
+    padding-left: 10px;
 }
 
 body {
@@ -40,4 +47,20 @@ body {
 
 .small-font {
     font-size: 14px;
+}
+
+.vertical-line-header {
+    border-left: 5px solid;
+    height: auto;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+}
+
+div.right-content {
+    flex: 1;
+    text-align: right;
+    margin-top: 25px;
 }
