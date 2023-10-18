@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "description": "Comparison of Cases against Police for Negligence in each state",
-  "width": 500,
+  "width": "container",
   "height": 500,
   "data": {
     "url": "https://raw.githubusercontent.com/ChoonSeong/FIT3179-Data-Visualisation/Data-Visualisation-Assignment-2/data/2018%20Escapes%20from%20Police%20Custody.csv"
