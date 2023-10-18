@@ -117,8 +117,7 @@
   "transform": [
     {"filter": "State_Selection == null || datum['State/UT'] == State_Selection"},
     {"filter": "datum['Persons Escaped - From lockup'] >= Minimum_Number_of_Escapes_From_Lockup"},
-    {"filter": "datum['Persons Escaped - Outside Lockup'] >= Minimum_Number_of_Escapes_Outside_Lockup"},
-    {"filter": "datum['Persons Escaped - From lockup'] != 0 && datum['Persons Escaped - Outside Lockup'] != 0"}
+    {"filter": "datum['Persons Escaped - Outside Lockup'] >= Minimum_Number_of_Escapes_Outside_Lockup"}
   ],
   "hconcat": [
     {
